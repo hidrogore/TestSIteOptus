@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optus — Спорттовары</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем иконки Font Awesome (для корзины, сердечек и т.д.) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ШАПКА САЙТА -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="Optus" class="logo-img">
+                <span class="logo-text">OPTUS</span>
+            </a>
+            
+            <nav class="nav">
+                <a href="#catalog" class="nav-link">Каталог</a>
+                <a href="#about" class="nav-link">О нас</a>
+                <a href="#contacts" class="nav-link">Контакты</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-btn" id="searchToggle">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="cart-btn" id="cartToggle">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ПАНЕЛЬ ПОИСКА (скрыта по умолчанию) -->
+    <div class="search-panel" id="searchPanel">
+        <div class="container">
+            <input type="text" placeholder="Поиск товаров..." class="search-input" id="searchInput">
+            <button class="search-close" id="searchClose">&times;</button>
+        </div>
+    </div>
+
+    <!-- ГЛАВНЫЙ БАННЕР (HERO) -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Спорт — это жизнь</h1>
+                <p>Всё для фитнеса, единоборств и активного отдыха. Доставка по всей Беларуси.</p>
+                <a href="#catalog" class="btn btn-primary">Перейти в каталог</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/banners/hero-sport.jpg" alt="Спорт">
+            </div>
+        </div>
+    </section>
+
+    <!-- КАТАЛОГ ТОВАРОВ -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <h2 class="section-title">Каталог товаров</h2>
+
+            <!-- ПАНЕЛЬ ФИЛЬТРОВ -->
+            <div class="filters">
+                <button class="filter-btn active" data-category="all">Все</button>
+                <button class="filter-btn" data-category="fitness">Фитнес</button>
+                <button class="filter-btn" data-category="combat">Единоборства</button>
+                <button class="filter-btn" data-category="outdoor">Активный отдых</button>
+            </div>
+
+            <!-- СЕТКА ТОВАРОВ (заполняется JavaScript) -->
+            <div class="product-grid" id="productGrid"></div>
+        </div>
+    </section>
+
+    <!-- КОРЗИНА (боковая панель) -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Корзина</h3>
+            <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Товары в корзине рендерятся через JS -->
+            <p class="cart-empty">Корзина пуста</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Итого:</span>
+                <span id="cartTotal">0 BYN</span>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkoutBtn">Оформить заказ</button>
+        </div>
+    </aside>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer" id="contacts">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>OPTUS</h4>
+                <p>Спорттовары для активной жизни.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <p><i class="fas fa-phone"></i> +375 (XX) XXX-XX-XX</p>
+                <p><i class="fas fa-envelope"></i> info@optus.by</p>
+            </div>
+            <div class="footer-col">
+                <h4>Соцсети</h4>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Optus. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
