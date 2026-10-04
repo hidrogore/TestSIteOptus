@@ -48,15 +48,7 @@ img {
     display: block;
 }
 
-/* ========== ШАПКА ========== */
-.header {
-    background: linear-gradient(90deg, #c5cbd6, #d7dce5);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: var(--shadow);
-}
+
 
 
 .header-content {
