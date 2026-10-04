@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-11
+
 :root {
     --primary: #17c3fc;
     --primary-dark: #00b4fc;
@@ -643,6 +643,8 @@ img {
 }
 /* Верхняя шапка */
 .navbar-top {
+    position: sticky;
+    top: 0;
     background: linear-gradient(90deg, #c5cbd6, #d7dce5);
     padding: 15px 0;
     box-shadow: var(--shadow);
