@@ -307,3 +307,47 @@ searchToggle.addEventListener('click', () => {
 searchClose.addEventListener('click', () => {
     searchPanel.classList.remove('active');
     searchInput.value = '';
+
+    /* ==========================================
+   8. ПРИЛИПАЮЩАЯ ШАПКА (STICKY NAVBAR)
+   ========================================== */
+document.addEventListener('DOMContentLoaded', function() {
+    var ticking = false;
+    var navbarTop = document.getElementById('navbar-top');
+    var navbarFixed = document.getElementById('navbar-fixed');
+    var navbarFixedSpacer = document.getElementById('navbar-fixed-spacer');
+
+    if (!navbarTop || !navbarFixed) return; // защита от ошибок
+
+    function updateNavbar() {
+        var navbarTopHeight = navbarTop.offsetHeight;
+        var navbarFixedHeight = navbarFixed.offsetHeight;
+        var scrollTop = window.scrollY;
+
+        if (scrollTop >= navbarTopHeight) {
+            navbarFixed.classList.add('fixed-top');
+            navbarFixed.classList.remove('d-none');
+            navbarFixedSpacer.style.minHeight = navbarFixedHeight + 'px';
+            navbarFixedSpacer.classList.remove('d-none');
+        } else {
+            navbarFixed.classList.remove('fixed-top');
+            navbarFixed.classList.add('d-none');
+            navbarFixedSpacer.classList.add('d-none');
+        }
+    }
+
+    function onScroll() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                updateNavbar();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('touchmove', onScroll, { passive: true });
+    window.addEventListener('resize', updateNavbar);
+    updateNavbar();
+});
