@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+11
 :root {
     --primary: #17c3fc;
     --primary-dark: #00b4fc;
@@ -57,6 +57,7 @@ img {
     z-index: 100;
     box-shadow: var(--shadow);
 }
+
 
 .header-content {
     display: flex;
@@ -639,4 +640,40 @@ img {
         width: 100%;
         right: -100%;
     }
+}
+/* Верхняя шапка */
+.navbar-top {
+    background: linear-gradient(90deg, #c5cbd6, #d7dce5);
+    padding: 15px 0;
+    box-shadow: var(--shadow);
+}
+
+/* Фиксированная шапка */
+.navbar-fixed {
+    background: white;
+    padding: 10px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+    .navbar-fixed.fixed-top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+/* Спейсер */
+.navbar-fixed-spacer {
+    display: block;
+}
+
+/* Утилитарный класс скрытия (как в Bootstrap) */
+.d-none {
+    display: none !important;
 }

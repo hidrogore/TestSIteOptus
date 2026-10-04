@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+<head>11
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optus — Спорттовары</title>
@@ -9,8 +9,72 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+</body class="d-flex flex-column h-100">
+<div></div> ///добавить - НЕДОДЕЛАНО
+
+<!-- Верхняя шапка (обычная) -->
+<header class="navbar-top" id="navbar-top">
+    <div class="container header-content">
+        <a href="#" class="logo">
+            <span class="logo-text">OPTUS</span>
+        </a>
+        <nav class="nav">
+            <a href="#catalog" class="nav-link">Каталог</a>
+            <a href="#about" class="nav-link">О нас</a>
+            <a href="#contacts" class="nav-link">Контакты</a>
+        </nav>
+        <div class="header-actions">
+            <a href="tel:+375291234567" class="call-btn">
+                <i class="fas fa-phone"></i>
+            </a>
+            <button class="cart-btn" id="cartToggle">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Фиксированная шапка (появляется при прокрутке) -->
+<header class="navbar-fixed d-none" id="navbar-fixed">
+    <div class="container header-content">
+        <a href="#" class="logo">
+            <span class="logo-text">OPTUS</span>
+        </a>
+        <nav class="nav">
+            <a href="#catalog" class="nav-link">Каталог</a>
+            <a href="#about" class="nav-link">О нас</a>
+            <a href="#contacts" class="nav-link">Контакты</a>
+        </nav>
+        <div class="header-actions">
+            <a href="tel:+375291234567" class="call-btn">
+                <i class="fas fa-phone"></i>
+            </a>
+            <button class="cart-btn" id="cartToggleFixed">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCountFixed">0</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Spacer (чтобы контент не прыгал) -->
+<div class="navbar-fixed-spacer d-none" id="navbar-fixed-spacer"></div>
 
     <!-- ШАПКА САЙТА -->
+     <div class = "bg-light border-bottom border-secondary border-opacity-10"
+     id="navbar-top">
+    <div class ="container-fluid py-lg-1">
+    </div class= "d-flex flex-wrap flex-column flex-sm-row align-items-center justify-content-center column-gap-4 row-gap-1 row-gap-sm-0 1h-md py-2 py-lg-3">
+    </div class="d-flex flex-wrap align-items-center justify-content-center column-gap-4 row-gap-1 row-gap-sm-0">
+    </div class="d-flex flex-wrap align-items-center justify-content-center column-gap-2 column-gap-lg-3 row-gap-1">
+    <span class="text-dark letter-spacing-1 fw-semibold text-uppercase text-secondary text-opacity-50" style="font-size:.625rem;"> что-нибудь</span>
+    </div class="d-flex flex-wrap justify-content-center column-gap-2 column-gap-lg-3">
+    </div class="d-flex align-items-center gap-1 gap-lg-2">
+    <img src ="/coding/TestSite/phone-icon-a1.webp" alt="A1" title="A1" height="10">
+    <a class = "link-dark link-underline-opacity-0 link-underline-opacity-100-hover link-offset-3 fw-semibold text-nowrap letter-spacing-2"
+    href="tel: +375339040082"> (33)&nbsp;904-00-82</a>
+    </div>
     <header class="header">
         <div class="container header-content">
             <a href="#" class="logo">
